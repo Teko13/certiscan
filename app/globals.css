@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --border: #333333;
+  --muted: #4d4d4d;
+  --muted-foreground: #b3b3b3;
+  --accent: #facc15;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Couleur de sélection globale */
+::selection {
+  background: #facc15;
+  color: #0a0a0a;
+}
+::-moz-selection {
+  background: #facc15;
+  color: #0a0a0a;
+}
+
+/* Styles personnalisés pour l'application */
+.glass-effect {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(250, 204, 21, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #facc15, #fef08a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Boutons personnalisés */
+.btn-primary {
+  @apply border-2 border-[#facc15] text-[#facc15] bg-transparent px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer;
+}
+
+.btn-primary:hover {
+  @apply bg-[#facc15] text-[#0a0a0a];
+}
+
+.btn-secondary {
+  @apply bg-[#facc15] text-[#0a0a0a] px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer;
+}
+
+.btn-secondary:hover {
+  @apply bg-transparent text-[#facc15] border-2 border-[#facc15];
+}
