@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Logo from './Logo';
 
 interface HeaderProps {
-  currentPage?: 'home' | 'scanner';
+  currentPage?: 'home' | 'scanner' | 'privacy';
 }
 
 const Header: React.FC<HeaderProps> = ({ currentPage = 'home' }) => {
