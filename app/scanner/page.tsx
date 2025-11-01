@@ -493,26 +493,18 @@ export default function ScannerPage() {
 
                 {/* Validation de la signature */}
                 {decodedData.success && decodedData.signature && (
-                  <div className={`rounded-lg p-4 ${
-                    decodedData.signature.valid ? 'bg-green-500/10 border border-green-500/20' : 'bg-red-500/10 border border-red-500/20'
-                  }`}>
+                  <div className="bg-[#facc15]/10 border border-[#facc15]/20 rounded-lg p-4">
                     <div className="flex items-center">
-                      {decodedData.signature.valid ? (
-                        <svg className="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      ) : (
-                        <svg className="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      )}
+                      <svg className="w-6 h-6 text-[#facc15] mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
                       <div>
-                        <span className={`font-semibold ${decodedData.signature.valid ? 'text-green-400' : 'text-red-400'}`}>
-                          {decodedData.signature.valid ? 'Signature valide' : 'Signature invalide'}
+                        <span className="font-semibold text-[#facc15]">
+                          Vérification de signature
                         </span>
-                        {decodedData.signature.error && (
-                          <p className="text-red-300 text-sm mt-1">{decodedData.signature.error}</p>
-                        )}
+                        <p className="text-text-secondary text-sm mt-1">
+                          Cette fonctionnalité sera bientôt disponible.
+                        </p>
                       </div>
                     </div>
                   </div>
